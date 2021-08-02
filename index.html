@@ -3,10 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
     <title>Base Apparel coming soon page</title>
 </head>
 <body>
-    
+    <section>
+        <div>
+            <img src="logo.svg" width="100px" id="logo">
+            <img src="hero-mobile.jpg" id="hero-mobile">
+            <h1>
+                <span>WE'RE</span> COMING SOON
+            </h1>
+            <p>
+                Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals. 
+            </p>
+            <form id="input-div"  onsubmit="return false;">
+                <input type="text" placeholder="Email Address" id="input-text" >
+                <img src="icon-error.svg" id="icon-error">
+                <input type="image" id="input-submit" src="icon-arrow.svg" width="100px" height="100px" onclick="validation()">
+                <p id="text">fd</p>
+            </form>
+        </div>
+        <img src="hero-desktop.jpg" id="hero-desktop" >
+    </section>
+    <script type="text/javascript">
+        function validation(){
+            var email = document.getElementById("input-text").value;
+            var text = document.getElementById("text");
+            var error = document.getElementById("icon-error");
+            var border = document.getElementById("input-text");
+            var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            if(email.match(pattern)){    
+;
+                error.style.display ="none";
+                text.innerHTML ="Email address has been submitted";
+                text.style.display ="block";
+                text.style.color="greenyellow";
+            }
+            else{
+                text.innerHTML ="Your Emaill address is invalid";
+                text.style.display ="block";
+                error.style.display ="block";
+                border.style.boxShadow ="0 0 0 1px red";
+                text.style.color="red";
+            }
+        }
+    </script>
 </body>
-</html>
+</html> 
