@@ -1,192 +1,217 @@
+
 @font-face {
-    font-family: JosefinSans100;   
-    src: url(JosefinSans-VariableFont_wght.ttf);
-    font-weight: 100;
+    font-family: Poppins-SemiBold;   
+    src: url(Poppins/Poppins-SemiBold.ttf) format('truetype');
 }
 
 @font-face {
-    font-family: JosefinSans500;   
-    src: url(JosefinSans-VariableFont_wght.ttf);
-    font-weight: 500;
+    font-family: Poppins-Medium;   
+    src: url(Poppins/Poppins-Medium.ttf) format('truetype');
 }
 
 @font-face {
-    font-family: JosefinSans400;   
-    src: url(JosefinSans-VariableFont_wght.ttf);
-    font-weight: 4400;
+    font-family: Poppins-Regular;   
+    src: url(Poppins/Poppins-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: Poppins-Light;   
+    src: url(Poppins/Poppins-Light.ttf) format('truetype');
 }
 
 html, body{
     margin: 0;
     padding: 0;
-    font-size: 16px;  
+    background-image: url("bg-intro-mobile.png");
+    background-color: hsl(0, 100%, 74%);
 }
 
-#logo{
-    margin: 35px;
-}
-
-#hero-desktop{
-    display: none;
-}
-
-#hero-mobile{
-    width: 100%;
-}
-
-h1{
-    font-family: "JosefinSans400";
-    font-size: 2.4em;
-    letter-spacing: 0.3em;
+#top-left{
     text-align: center;
-    line-height: 1.2em;
+}
+
+#top-left h1{
+    font-family: Poppins-SemiBold;
+    color: white;
+    font-size: 1.6rem;
+}
+
+#top-left p{
+    font-family: Poppins-Regular;
+    color: whitesmoke;
+    font-size: 0.9rem;
+}
+
+#bottom-right button{
+    font-family: Poppins-Medium;    
+    background-color: hsl(248, 32%, 49%);
+    color: white;
+    width: 100%;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    padding: 17px 50px 17px 50px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+}
+
+#bottom-right button:hover{
+    box-shadow: 0px 6px 0px 0px hsl(248, 32%, 49%);
+    cursor: pointer;
+}
+
+#bottom-right button span{
+    font-family: Poppins-Light;  
+    opacity: 85%;
+}
+
+#bottom-right form{
+    background-color: white;
+    border-radius: 12px;
+}
+
+form{
+    text-align: center;
+    padding: 20px;
+}
+
+form input[type=text]{
+    box-sizing: border-box;
+    font-family: Poppins-SemiBold;   
+    width: 100%;
+    padding: 13px 0px 13px 20px;
+    border-radius: 6px;
+    border: 1px solid lightgray;
     margin-bottom: 15px;
 }
 
-h1 span{
-    color: hsl(0, 93%, 68%);
-    font-family: "JosefinSans100";
+form input[type=submit]{
+    width: 100%;
+    background-color:  hsl(154, 59%, 51%);
+    font-family: Poppins-SemiBold;   
+    color: whitesmoke;
+    border: none;
+    border-radius: 6px;
+    padding: 15px 50px 13px 50px;
+    box-shadow: 0px 4px 0px 0px hsl(154, 50%, 45%);
 }
 
-p{
-    font-family: "JosefinSans500";
-    color: hsl(0, 36%, 70%); 
-    font-size: 0.93em;
-    line-height: 1.5em;
-    margin: 0px 20px 25px 20px;
-    text-align: center;
+form p{
+    color: hsl(246, 25%, 77%);
+    font-family: Poppins-Medium; 
+    font-size: 0.65rem;
+    margin: 20px;
+    line-height: 1.2rem;
 }
 
-#input-div{
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: fit-content;
-    margin-bottom: 50px;
+form p span{
+    font-family: Poppins-SemiBold; 
+    color: hsl(0, 100%, 74%);
 }
 
-#input-text{
-    margin: auto;
-    width: 280px;
-    padding-left: 20px;
-    height: 45px;
-    border-radius: 30px;
-    border: hsl(0, 36%, 70%) 1px solid;
-    outline:none;
-}
+@media only screen and (max-width: 600px){
 
-#input-text:hover{
-    box-shadow: 0 0 0 1pt grey;
-}
-
-#input-text:focus{
-    box-shadow: 0 0 0 1pt grey;
-}
-
-#input-submit{
-    background: linear-gradient(130deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-    width: 22px;
-    height: 22px;
-    padding: 15px 30px 15px 30px;
-    border-radius: 30px;
-    position: absolute;
-    right: -2px;
-    top:-1px;
-}
-
-#input-submit:hover, #input-submit:active{
-    background: linear-gradient(130deg, hsl(0, 100%, 98%), hsl(0, 36%, 70%));
-    height: 25px;
-    width: 25px;
-    right: -2.5px;
-    top: -2.5px;
-}
-
-#text{
-    display: none;
-    font-size: 0.8em;
-    color: red;
-    margin-top: 5px;
-    margin-left: 10px;
-    text-align: left;
-}
-
-#icon-error{
-    display: none;
-    position: absolute;
-    width: 25px;
-    right: 85px;
-    top: 10px;
-}
-
-@media only screen and (min-width: 720px){
-
-    section{
-        width: 1200px;
-        display: flex;
-        margin: auto;
-        margin-top: 50px; 
-        box-shadow: 0px 0px 10px 1px lightgray ;
+    html, body{
+        font-size: 16px;
     }
 
-    section div{
-        background-image: url("bg-pattern-desktop.svg");
-        padding-left: 120px;
-        padding-top: 60px;
-        
+    #top-left{
+        margin: 30px 15px 30px 15px;
     }
 
-    h1{
-        text-align: left;
-        font-size: 3.5em;
-        margin-top: 80px;
+    #top-left h1{
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
-    p{
-        text-align: left;
-        margin: 0;
-        margin: 20px 150px 50px 0px;
-        font-size: 1em;
+    #bottom-right{
+        margin-left: 30px;
+        margin-right: 30px;
+    }    
+}
+
+@media only screen and  (min-width: 600px) and (max-width: 900px){
+
+    html, body{
+        font-size: 26px;
     }
 
-
-    #logo{  
-        width: 130px;
-        margin: 0;
+    #top-left{
+        margin: 30px 60px 30px 60px;
     }
 
-    #hero-mobile{
-        display: none;
+    #top-left h1{
+        margin-left: 60px;
+        margin-right: 60px;
     }
 
-    #hero-desktop{
-        width: 500px;
-        display: block;
+    #bottom-right{
+        margin-left: 100px;
+        margin-right: 100px;
     }
+}
 
-    #input-div{
-        left: 0%;
-        transform: translateX(0%);
-    }
+@media only screen and (min-width: 900px) and (max-width:1024px){
 
-    #input-text{
-        width: 380px;
+    html, body{
+        font-size: 26px;
     }
     
-    #text{
-        display: none;
-        font-size: 0.8em;
-        color: red;
-        margin-top: 5px;
-        margin-left: 10px;
+    #main{
+        display: flex;
+        margin-top: 80px;
+        margin-left: 60px;
+        margin-right: 60px;
     }
 
-    #icon-error{
-        display: none;
-        position: absolute;
-        width: 30px;
-        right: 90px;
-        top: 10px;
+    #top-left{
+        text-align: left;
+        width: 50%;
+        margin-right: 20px;
     }
 
+    #top-left p{
+        font-size: 0.8rem;
+    }
+
+    #bottom-right{
+        width: 50%;
+    }
+}
+
+
+@media only screen and (min-width: 1025px){
+    html, body{
+        background: none;
+        font-size: 26px;
+    }
+
+    #main{
+        background-image: url("bg-intro-desktop.png");
+        background-color: hsl(0, 100%, 74%);
+        width: 900px;
+        display: flex;
+        margin: auto;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    
+    #top-left{
+        text-align: left;
+        width: 50%;
+        margin-right: 60px;
+        margin-left: 60px;
+    }
+
+    #top-left p{
+        font-size: 0.8rem;
+    }
+
+    #bottom-right{
+        width: 50%;
+        margin-right: 50px;
+    }
 }
